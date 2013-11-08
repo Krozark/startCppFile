@@ -106,7 +106,7 @@ class Class(object):
         r+= line(self.depth,"{")
         for f in self.functions:
             r+= f.to_hpp(self.depth+1)
-        r+= line(self.depth,"}")
+        r+= line(self.depth,"};")
         return r
 
     def to_cpp(self):

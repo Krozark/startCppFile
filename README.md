@@ -18,6 +18,6 @@ Specify your classname, namespace and others options:
       --hpp                 build hpp file
       --cpp                 build cpp file
 
-if no --cpp and --hpp are specify, both are build.
+If no --hpp and --cpp optionns are specified, both are built.
 
 
