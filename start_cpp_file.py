@@ -105,8 +105,11 @@ class Class(object):
     def to_hpp(self):
         r = line(self.depth,"class %s" % self.name)
         r+= line(self.depth,"{")
+        r+= line(self.depth+1,"public:")
         for f in self.functions:
-            r+= f.to_hpp(self.depth+1)
+            r+= f.to_hpp(self.depth+2)
+        r+= line(self.depth+1,"protected:")
+        r+= line(self.depth+1,"private:")
         r+= line(self.depth,"};")
         return r
 
