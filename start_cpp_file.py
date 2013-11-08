@@ -190,8 +190,8 @@ def main(argv):
     parser.add_argument("classname", help="the name of the class to create",type=str)
     parser.add_argument("--no-copy", help="make a none copyable class",action="store_true")
     parser.add_argument('-n', '--namespace', nargs='+', type=str,default=[])
-    parser.add_argument("--hpp", help="build hpp file",action="store_true",default=False)
-    parser.add_argument("--cpp", help="build cpp file",action="store_true",default=False)
+    parser.add_argument("--hpp", help="build hpp file. If no --hpp and --cpp options are specified, both are built.",action="store_true",default=False)
+    parser.add_argument("--cpp", help="build cpp file. If no --hpp and --cpp options are specified, both are built.",action="store_true",default=False)
 
     args = parser.parse_args()
     args.classname = args.classname.title()
