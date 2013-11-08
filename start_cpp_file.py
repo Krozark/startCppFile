@@ -108,7 +108,10 @@ class Class(object):
         r+= line(self.depth+1,"public:")
         for f in self.functions:
             r+= f.to_hpp(self.depth+2)
+
+        r+="\n"
         r+= line(self.depth+1,"protected:")
+        r+="\n"
         r+= line(self.depth+1,"private:")
         r+= line(self.depth,"};")
         return r
