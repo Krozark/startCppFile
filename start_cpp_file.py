@@ -95,7 +95,8 @@ class Class(object):
     def add_assignement(self,delete=False,params=None):
         if not params:
             params = [self._as_const_ref(),]
-        self.add_function(Function(ret=self._as_ref(),
+        self.add_function(Function(name="operator=",
+                                   ret=self._as_ref(),
                                    params=params,
                                    klass=self,
                                    delete = delete))
