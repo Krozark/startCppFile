@@ -205,11 +205,12 @@ def main(argv):
 
     #build klass
     klass = Class(args.classname)
-    klass.add_constructor();
 
     if args.no_copy:
         klass.add_copy_constructor(delete=True)
         klass.add_assignement(delete=True)
+
+    klass.add_constructor();
 
     #build renderer
     r = Render(args.namespace,args.classname)
